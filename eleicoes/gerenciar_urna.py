@@ -25,6 +25,10 @@ def votar(urna : Urna):
     print(eleitor)
     print("Pode votar!")
     print("===========")
-    voto = int(input("Digite o numero do candidato: "))
+    voto = int(input("Digite o numero do candidato ou 0 para branco: "))
     urna.registrar_voto(eleitor, voto)
+
+def fechar_urna(urna : Urna):
+    urna.encerrar()
+    print(urna)
 
